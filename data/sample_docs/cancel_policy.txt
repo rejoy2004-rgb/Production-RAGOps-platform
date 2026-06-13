@@ -1,0 +1,13 @@
+RAGOps Platform Cancellation Policy
+
+1. Subscription Cancellation Process:
+Annual and monthly subscriptions can be cancelled at any time. To cancel, users must log in to the web dashboard, navigate to Account Settings -> Billing, and click on 'Cancel Subscription'. Alternatively, cancellations can be requested by emailing billing@ragopsplatform.com. 
+
+2. Non-prorated Billing:
+Cancellations prevent the automatic renewal of the subscription at the end of the current billing cycle. However, the platform does not offer prorated or partial refunds for unused portions or mid-cycle cancellations. Users will retain full access to all premium features until the end of their current billing term.
+
+3. Free Trial Terms:
+Users can sign up for a 14-day free trial. You can cancel your free trial at any time before the trial period ends, and no charges will be applied to your credit card. If you do not cancel, the subscription will automatically convert to the paid monthly plan ($29/month).
+
+4. Writing Requirement:
+For verification and security purposes, all account cancellations must be requested in writing through the web dashboard billing portal or by emailing support from the registered email address. Phone cancellations are not supported.

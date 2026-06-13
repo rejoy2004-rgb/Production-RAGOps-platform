@@ -1,0 +1,6 @@
+PolicyType,Condition,Details
+24-Hour Grace Period,Cancellation within 24 hours,Customers are eligible for a full 100% refund on all subscription purchases if the cancellation is requested within 24 hours of the initial transaction.
+Transaction Fees,Payment gateway charges,Payment gateway transaction fees (typically 2.9% + $0.30) are non-refundable and will be deducted from the total refund amount.
+Processing Time,Refund duration,Once approved refunds are processed immediately. However it may take 5 to 10 business days for the funds to appear in your bank account depending on your financial institution.
+Delayed Refunds,Status check,If your refund has not posted after 10 business days you should contact our support team at support@ragopsplatform.com with your transaction ID.
+Setup Fees,Onboarding services,Setup onboarding installation or custom configuration fees are completely non-refundable once the setup process has commenced.

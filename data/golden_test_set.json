@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is the refund policy for cancellation within 24 hours of purchase?",
+    "ground_truth": "Customers are eligible for a full 100% refund on all subscription purchases if the cancellation is requested within 24 hours of the initial transaction."
+  },
+  {
+    "question": "Are payment gateway transaction fees refundable?",
+    "ground_truth": "No, payment gateway transaction fees (typically 2.9% + $0.30) are non-refundable and will be deducted from the total refund amount."
+  },
+  {
+    "question": "How do I cancel my annual subscription?",
+    "ground_truth": "Annual subscriptions can be cancelled through the billing portal under account settings, or by emailing billing@ragopsplatform.com. The cancellation will prevent automatic renewal at the end of the current billing cycle."
+  },
+  {
+    "question": "What happens if I cancel my subscription after 14 days of purchase?",
+    "ground_truth": "If you cancel after the 14-day grace period, you will not receive a refund for the current billing cycle. However, you will retain full access to all premium features until the end of your billing term."
+  },
+  {
+    "question": "Can I get a partial refund for unused portions of my subscription?",
+    "ground_truth": "No, the platform does not offer prorated or partial refunds for unused portions or mid-cycle cancellations of any subscription plans."
+  },
+  {
+    "question": "How long does it take for a refund to show up in my bank account?",
+    "ground_truth": "Once approved, refunds are processed immediately. However, it may take 5 to 10 business days for the funds to appear in your bank account, depending on your financial institution."
+  },
+  {
+    "question": "What is the policy for subscription cancellation during a free trial?",
+    "ground_truth": "You can cancel your free trial at any time before the trial period ends. No charges will be applied to your card. If you do not cancel, the subscription will automatically convert to a paid monthly plan."
+  },
+  {
+    "question": "Who should I contact if my refund is delayed beyond 10 business days?",
+    "ground_truth": "If your refund has not posted after 10 business days, you should contact our support team at support@ragopsplatform.com with your transaction ID."
+  },
+  {
+    "question": "Are setup fees refundable?",
+    "ground_truth": "No, setup, installation, or onboarding fees are completely non-refundable once the setup process has commenced."
+  },
+  {
+    "question": "Can I cancel my account over the phone?",
+    "ground_truth": "No, account cancellations must be requested in writing through the web dashboard billing portal or by emailing support from the registered email address for verification and security purposes."
+  }
+]
