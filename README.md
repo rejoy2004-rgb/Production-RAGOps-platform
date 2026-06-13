@@ -184,3 +184,36 @@ To verify code changes and system components:
 ```bash
 python -m pytest
 ```
+
+---
+
+# Screenshots
+
+## API Documentation
+
+![Swagger API](docs/images/swagger-api.png)
+
+---
+
+## Grafana Monitoring Dashboard
+
+![Grafana Dashboard](docs/images/grafana-dashboard.png)
+
+---
+
+## Qdrant Vector Database
+
+![Qdrant Dashboard](docs/images/qdrant-dashboard.png)
+
+---
+
+## Evaluation Results
+
+![Evaluation Results](docs/images/evaluation-results.png)
+
+---
+
+## CI/CD Pipeline
+
+![GitHub Actions](docs/images/github-actions.png)
+
