@@ -67,3 +67,17 @@ def test_embedder(mock_hf_embeddings):
     
     vecs = embedder.embed_documents(["doc text"])
     assert vecs == [[0.1, 0.2, 0.3]]
+
+def test_document_loader_pdf():
+    """Verifies that the PDF file loader works correctly with the sample PDF."""
+    pdf_path = Path(__file__).parent.parent / "data" / "sample_docs" / "cancel_policy.pdf"
+    if not pdf_path.exists():
+        pytest.skip("cancel_policy.pdf does not exist in sample_docs")
+        
+    docs = DocumentLoader.load_pdf(pdf_path)
+    assert len(docs) > 0
+    # The OCR of page 1 shows "Cancellation Policy" as the main header
+    assert any("Cancellation Policy" in doc.page_content for doc in docs)
+    assert docs[0].metadata["source"] == "cancel_policy.pdf"
+    assert docs[0].metadata["page_number"] == 1
+
