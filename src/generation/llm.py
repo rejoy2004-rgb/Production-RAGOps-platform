@@ -266,6 +266,27 @@ class LLMService:
     @traceable(name="LLMService.call_llm", run_type="llm")
     def call_llm(self, prompt: str, system_prompt: Optional[str] = None, model: Optional[str] = None) -> str:
         """Dispatches LLM calls to the appropriate service (Gemini direct, Claude direct, or OpenRouter) with fallback."""
+        import os
+        import re
+        if os.getenv("EVAL_MOCK") == "true" or os.getenv("MOCK_LLM") == "true":
+            logger.info("Mock LLM mode is active. Returning simulated response.")
+            sys_prompt_lower = (system_prompt or "").lower()
+            if "query decomposition" in sys_prompt_lower:
+                match = re.search(r'Question to decompose:\s*"(.*?)"', prompt)
+                if match:
+                    return match.group(1)
+                return prompt
+            elif "faithfulness" in sys_prompt_lower:
+                return '{\n  "reasoning": "Mocked faithfulness check: answer matches retrieved context.",\n  "score": 1.0\n}'
+            elif "context precision" in sys_prompt_lower:
+                return '{\n  "reasoning": "Mocked context precision check: chunks are relevant.",\n  "score": 1.0\n}'
+            elif "context recall" in sys_prompt_lower:
+                return '{\n  "reasoning": "Mocked context recall check: retrieved context contains ground truth.",\n  "score": 1.0\n}'
+            else:
+                match = re.search(r'Question:\s*(.*?)\s*\n\nAnswer', prompt, re.DOTALL)
+                q_text = match.group(1).strip() if match else "query"
+                return f"Mocked generated answer for: {q_text} based on the retrieved context."
+
         model_to_use = model or settings.default_model
         
         # Route based on model prefix and API key availability

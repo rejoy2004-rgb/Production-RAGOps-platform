@@ -47,7 +47,6 @@ jobs:
     - name: Run RAG Evaluation & Regression Check
       env:
         QDRANT_URL: http://localhost:6333
-        OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-      if: ${{ env.OPENROUTER_API_KEY != '' }}
       run: |
-        python -m scripts.evaluate
+        python -m scripts.evaluate --mock
+

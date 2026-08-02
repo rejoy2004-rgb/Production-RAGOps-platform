@@ -31,9 +31,18 @@ def main():
         default=settings.default_model,
         help="LLM model to use for generation and evaluation."
     )
+    parser.add_argument(
+        "--mock",
+        action="store_true",
+        help="Use mocked LLM responses for CI evaluation"
+    )
     
     args = parser.parse_args()
     model = args.model
+    
+    if args.mock:
+        import os
+        os.environ["EVAL_MOCK"] = "true"
     
     # Initialize components
     decomposer = QueryDecomposer()

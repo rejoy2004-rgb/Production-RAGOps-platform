@@ -81,3 +81,38 @@ def test_document_loader_pdf():
     assert docs[0].metadata["source"] == "cancel_policy.pdf"
     assert docs[0].metadata["page_number"] == 1
 
+def test_llm_service_mock_mode():
+    """Verifies LLMService behavior when mock mode is enabled."""
+    from src.generation.llm import LLMService
+    import os
+    
+    original_env = os.environ.get("EVAL_MOCK")
+    os.environ["EVAL_MOCK"] = "true"
+    
+    try:
+        service = LLMService()
+        # Test query decomposition mock
+        decomp_resp = service.call_llm(
+            prompt='Question to decompose: "What is the refund policy?"\n\nSub-queries:',
+            system_prompt='You are a query decomposition assistant.'
+        )
+        assert decomp_resp == "What is the refund policy?"
+        
+        # Test faithfulness mock
+        faith_resp = service.call_llm(
+            prompt="Evaluate faithfulness",
+            system_prompt="evaluate faithfulness"
+        )
+        assert "score" in faith_resp and "1.0" in faith_resp
+        
+        # Test general query mock
+        gen_resp = service.generate_answer("How do I cancel?", "Retrieve context text.")
+        assert "Mocked generated answer" in gen_resp
+        assert "How do I cancel?" in gen_resp
+    finally:
+        if original_env is not None:
+            os.environ["EVAL_MOCK"] = original_env
+        else:
+            os.environ.pop("EVAL_MOCK", None)
+
+
