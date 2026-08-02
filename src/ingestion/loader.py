@@ -1,3 +1,4 @@
+#Reads files and loads them into a standardized Document format for ingestion into the RAGOps platform
 import os
 import csv
 from pathlib import Path

@@ -1,3 +1,4 @@
+#Checks the faithfulness of generated answers, context precision, and context recall using LLMs as judges. Provides a structured evaluation framework for RAG systems.
 import json
 import re
 from typing import List, Dict, Any, Optional

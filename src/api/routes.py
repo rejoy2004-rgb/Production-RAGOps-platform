@@ -1,3 +1,4 @@
+# Answers what happens when a user visits an endpoint
 import time
 import json
 from typing import List, Optional

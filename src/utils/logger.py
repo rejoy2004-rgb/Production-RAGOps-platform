@@ -1,3 +1,4 @@
+#Contains shared utilities for logging and monitoring across the RAG system, ensuring consistent logging format and metrics collection.
 import logging
 import sys
 

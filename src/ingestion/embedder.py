@@ -1,3 +1,4 @@
+#converts text into embeddings using local or API-based methods
 import httpx
 from typing import List, Optional
 from src.config.config import settings

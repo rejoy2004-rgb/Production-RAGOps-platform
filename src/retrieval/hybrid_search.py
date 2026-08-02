@@ -1,3 +1,4 @@
+#Combines vector search and BM25 search using Reciprocal Rank Fusion (RRF)
 from typing import List, Dict
 from src.retrieval.vector_search import VectorSearcher, ScoredDocument
 from src.retrieval.bm25_search import BM25Searcher

@@ -1,3 +1,4 @@
+#Semantic search using vector embeddings and Qdrant vector database
 from typing import List, Dict, Any
 from pydantic import BaseModel, Field
 from qdrant_client import QdrantClient

@@ -1,3 +1,4 @@
+#Stores System Behaviour and Configuration Settings for the RAGOps Platform
 import os
 from pathlib import Path
 from typing import Optional

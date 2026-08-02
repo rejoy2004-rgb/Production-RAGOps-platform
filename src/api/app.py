@@ -1,3 +1,4 @@
+#Creation of Web Application using FastAPI
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from src.config.config import settings

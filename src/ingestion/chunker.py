@@ -1,3 +1,4 @@
+#chunks documents and generates metadata tags including chunk_id
 from typing import List
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from src.ingestion.loader import Document

@@ -1,3 +1,4 @@
+#BM25 keyword-based search using rank-bm25
 import pickle
 from typing import List
 from src.config.config import settings

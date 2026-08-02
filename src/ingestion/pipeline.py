@@ -1,3 +1,4 @@
+#Coordinates the ingestion pipeline for the RAGOps platform, including document loading, chunking, embedding, Qdrant upsert, and BM25 index building.
 import os
 import pickle
 import string

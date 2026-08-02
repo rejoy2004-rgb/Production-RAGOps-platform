@@ -1,3 +1,4 @@
+#Improves the ranking of retrieved documents by using a Cross-Encoder model to score query-document pairs, enhancing the relevance of search results.
 from typing import List
 from src.config.config import settings
 from src.retrieval.vector_search import ScoredDocument

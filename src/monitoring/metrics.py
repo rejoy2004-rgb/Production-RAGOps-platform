@@ -1,3 +1,4 @@
+#Answers what is happening in the RAG system when a user visits an endpoint, including metrics collection for Prometheus monitoring.
 from prometheus_client import Counter, Histogram, Gauge
 
 # 1. Total RAG Request Count
